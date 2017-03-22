@@ -94,3 +94,5 @@ yTrain        <- read.table("./train/y_train.txt", header = FALSE)
 Tidy_dataset_average_subject <- ddply(Data_mean_std, c("sub_id", "activity_id"), numcolwise(mean))
  
 write.table(Tidy_dataset_average_subject, file = "tidydata.txt")
+
+
