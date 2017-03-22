@@ -16,4 +16,4 @@ Look in the folder for the R script called run_analysis.R will have done the fol
 4) Appropriately labels the data set with descriptive variable names.
 5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
  
-##Steps 
+#Steps 
