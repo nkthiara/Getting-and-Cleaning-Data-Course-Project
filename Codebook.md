@@ -153,7 +153,7 @@ train_data <- cbind(as.data.table(subject_train), y_train, X_train)
 ### Merge test and train data
 data = rbind(test_data, train_data)
 
-# 5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+## 5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 id_labels   = c("subject", "Activity_ID", "Activity_Label")
 data_labels = setdiff(colnames(data), id_labels)
 melt_data      = melt(data, id = id_labels, measure.vars = data_labels)
