@@ -90,7 +90,7 @@ DATA FILES
 test/y_test.txt
 train/y_train.txt
 
-# 1) Merges the training and the test sets to create one data set.
+## 1) Merges the training and the test sets to create one data set.
 
 ### reading in the activity labels
 activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt")[,2]
@@ -98,7 +98,7 @@ activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt")[,2]
 ### reading in the features data
 features <- read.table("./UCI HAR Dataset/features.txt")[,2]
 
-# 2) Extract only the measurements on the mean and standard deviation for each measurement.
+## 2) Extract only the measurements on the mean and standard deviation for each measurement.
 extract_features <- grepl("mean|std", features)
 
 ### reading the test data : X_test & y_test data.
@@ -111,7 +111,7 @@ names(X_test) = features
 ### Extracting the features from the test data
 X_test = X_test[,extract_features]
 
-# 3) Uses descriptive activity names to name the activities in the data set
+## 3) Uses descriptive activity names to name the activities in the data set
   names(Data_mean_std) <- gsub("Acc","Acceleration", names(Data_mean_std))
   names(Data_mean_std) <- gsub("^t", "Time",names(Data_mean_std))  
   names(Data_mean_std) <- gsub("^f", "Frequency", names(Data_mean_std))
@@ -121,7 +121,7 @@ X_test = X_test[,extract_features]
   names(Data_mean_std) <- gsub("Freq", "Frequency", names(Data_mean_std))
   names(Data_mean_std) <- gsub("Mag", "Magnitude", names(Data_mean_std))
 
-# 4) Appropriately labels the data set with descriptive variable names.
+## 4) Appropriately labels the data set with descriptive variable names.
 
 ### Load activity labels
 y_test[,2] = activity_labels[y_test[,1]]
