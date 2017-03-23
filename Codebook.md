@@ -1,3 +1,4 @@
+# CodeBook
 ## Getting and Cleaning Data Course Project
 
 ### Instructions
@@ -74,7 +75,6 @@ library(data.table)
 library(tidyr)
 
 ### Files in folder ‘UCI HAR Dataset’ that will be used are:
-
 SUBJECT FILES
  -test/subject_test.txt
  -train/subject_train.txt
@@ -155,7 +155,7 @@ yTrain        <- read.table("./train/y_train.txt", header = FALSE)
   names(Data_mean_std) <- gsub("Freq", "Frequency", names(Data_mean_std))
   names(Data_mean_std) <- gsub("Mag", "Magnitude", names(Data_mean_std))
   
-### creates a second independent tidy data set with the average of each variable for each activity and subject.
+### Creates a second independent tidy data set with the average of each variable for each activity and subject.
   
 Tidy_dataset_average_subject <- ddply(Data_mean_std, c("sub_id", "activity_id"), numcolwise(mean))
  
